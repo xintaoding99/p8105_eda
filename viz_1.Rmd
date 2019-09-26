@@ -48,7 +48,7 @@ weather_df %>%
   geom_smooth(size = .5, se = FALSE)
 ```
 
-2d density
+## 2d density
 ```{r}
 ggplot(weather_df, aes(x = tmax, y = tmin)) + 
   geom_hex()
@@ -94,5 +94,21 @@ ggplot_rid =
 
 
 ggsave("ggplot_temp_ridge.pdf", ggplot_rid)  # safe to name the plot and then save
+```
+```{r fig.width = 6}
+```
+
+## Figure Width
+```{r fig.width = 6}
+weather_df %>% 
+  ggplot(aes(x = date, y = tmax, color = name)) +
+  geom_point(aes(size = prcp), alpha = .5)+
+  geom_smooth(size = .5, se = FALSE)
+```
+```{r fig.width= 12}
+weather_df %>% 
+  ggplot(aes(x = date, y = tmax, color = name)) +
+  geom_point(aes(size = prcp), alpha = .5)+
+  geom_smooth(size = .5, se = FALSE)
 ```
 

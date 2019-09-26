@@ -137,7 +137,7 @@ weather_df %>%
 
 ![](viz_1_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-2d density
+## 2d density
 
 ``` r
 ggplot(weather_df, aes(x = tmax, y = tmin)) + 
@@ -231,3 +231,35 @@ ggsave("ggplot_temp_ridge.pdf", ggplot_rid)  # safe to name the plot and then sa
     ## Picking joint bandwidth of 1.84
 
     ## Warning: Removed 3 rows containing non-finite values (stat_density_ridges).
+
+## Figure Width
+
+``` r
+weather_df %>% 
+  ggplot(aes(x = date, y = tmax, color = name)) +
+  geom_point(aes(size = prcp), alpha = .5)+
+  geom_smooth(size = .5, se = FALSE)
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
+
+    ## Warning: Removed 3 rows containing non-finite values (stat_smooth).
+
+    ## Warning: Removed 3 rows containing missing values (geom_point).
+
+![](viz_1_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+
+``` r
+weather_df %>% 
+  ggplot(aes(x = date, y = tmax, color = name)) +
+  geom_point(aes(size = prcp), alpha = .5)+
+  geom_smooth(size = .5, se = FALSE)
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
+
+    ## Warning: Removed 3 rows containing non-finite values (stat_smooth).
+
+    ## Warning: Removed 3 rows containing missing values (geom_point).
+
+![](viz_1_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
