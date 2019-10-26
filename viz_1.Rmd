@@ -105,10 +105,5 @@ weather_df %>%
   geom_point(aes(size = prcp), alpha = .5)+
   geom_smooth(size = .5, se = FALSE)
 ```
-```{r fig.width= 12}
-weather_df %>% 
-  ggplot(aes(x = date, y = tmax, color = name)) +
-  geom_point(aes(size = prcp), alpha = .5)+
-  geom_smooth(size = .5, se = FALSE)
-```
+
 
